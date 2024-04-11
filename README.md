@@ -60,10 +60,6 @@ To explore my projects:
 
 I welcome any feedback, suggestions, or collaboration opportunities related to my projects. If you have any ideas for improvement or would like to collaborate on a project, please don't hesitate to reach out.
 
-## License
-
-All projects in this repository are licensed under the [MIT License](LICENSE).
-
 ---
 
 Thank you for visiting my Visual Programming Course Projects repository! I hope you find my work insightful and valuable. Feel free to explore the projects, and don't hesitate to contact me for any inquiries or collaboration opportunities. 🚀🔍

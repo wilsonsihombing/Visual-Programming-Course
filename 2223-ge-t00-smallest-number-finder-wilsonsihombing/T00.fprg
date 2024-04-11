@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MSI GF63"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-08 11:25:40 AM"/>
+        <attribute name="created" value="TVNJIEdGNjM7TVNJOzIwMjItMDktMDg7MTA6MzQ6NDIgQU07MjAxMA=="/>
+        <attribute name="edited" value="TVNJIEdGNjM7TVNJOzIwMjItMDktMDg7MTE6MjU6NDAgQU07MzsyMTE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="X" type="Integer" array="False" size=""/>
+            <declare name="Y" type="Integer" array="False" size=""/>
+            <declare name="Z" type="Integer" array="False" size=""/>
+            <declare name="S" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <input variable="y"/>
+            <input variable="z"/>
+            <if expression="x&lt;y">
+                <then>
+                    <assign variable="s" expression="x"/>
+                </then>
+                <else>
+                    <assign variable="s" expression="y"/>
+                </else>
+            </if>
+            <if expression="z&lt;s">
+                <then>
+                    <assign variable="s" expression="z"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

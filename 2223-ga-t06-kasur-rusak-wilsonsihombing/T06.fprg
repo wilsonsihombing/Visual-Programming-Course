@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MSI GF63"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-01 01:42:49 PM"/>
+        <attribute name="created" value="TVNJIEdGNjM7TVNJOzIwMjItMTItMDE7MTA6MzI6NTQgQU07MTk5OA=="/>
+        <attribute name="edited" value="TVNJIEdGNjM7TVNJOzIwMjItMTItMDE7MDE6NDI6NDkgUE07NzsyMTMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="palindrome" type="Boolean" array="False" size=""/>
+            <declare name="huruf" type="String" array="False" size=""/>
+            <input variable="huruf"/>
+            <assign variable="palindrome" expression="true"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;= len(huruf)/2-1">
+                <if expression="char(huruf,i)&lt;&gt; char (huruf,len(huruf)-i-1)">
+                    <then>
+                        <assign variable="palindrome" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <if expression="palindrome=true">
+                <then>
+                    <output expression="&quot;YES&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;NO&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="bacakata" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="huruf" type="String" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="huruf[i]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

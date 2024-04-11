@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MSI GF63"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-10 11:43:22 AM"/>
+        <attribute name="created" value="TVNJIEdGNjM7TVNJOzIwMjItMTEtMTA7MDg6Mjc6NDMgQU07MjAwNg=="/>
+        <attribute name="edited" value="TVNJIEdGNjM7TVNJOzIwMjItMTEtMTA7MTE6NDM6MjIgQU07NjsyMTA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="transaksi, hargabuku, bukutermurah" type="Real" array="False" size=""/>
+            <assign variable="transaksi" expression="0"/>
+            <declare name="stop" type="Boolean" array="False" size=""/>
+            <assign variable="stop" expression="false"/>
+            <assign variable="bukutermurah" expression="1000"/>
+            <while expression="!(stop)">
+                <input variable="hargabuku"/>
+                <if expression="hargabuku=0">
+                    <then>
+                        <assign variable="stop" expression="!(stop)"/>
+                    </then>
+                    <else>
+                        <if expression="bukutermurah&lt;hargabuku">
+                            <then/>
+                            <else>
+                                <assign variable="bukutermurah" expression="hargabuku"/>
+                            </else>
+                        </if>
+                        <assign variable="transaksi" expression="transaksi+hargabuku"/>
+                    </else>
+                </if>
+            </while>
+            <if expression="transaksi&gt;=100">
+                <then>
+                    <assign variable="transaksi" expression="transaksi-bukutermurah"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="toFixed(transaksi,2)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

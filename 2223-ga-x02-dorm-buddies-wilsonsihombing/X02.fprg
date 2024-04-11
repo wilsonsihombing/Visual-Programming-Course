@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MSI GF63"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-12 01:07:36 PM"/>
+        <attribute name="created" value="TVNJIEdGNjM7TVNJOzIwMjItMTItMTI7MTA6Mjc6NDkgQU07MjAwOA=="/>
+        <attribute name="edited" value="TVNJIEdGNjM7TVNJOzIwMjItMTItMTI7MDE6MDc6MzYgUE07MTA7MjE3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="buddy" type="String" array="True" size="4"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <call expression="inisialisasi(buddy, i)"/>
+            <call expression="input(i, buddy)"/>
+            <call expression="roombuddies(i, buddy)"/>
+        </body>
+    </function>
+    <function name="inisialisasi" type="None" variable="">
+        <parameters>
+            <parameter name="buddy" type="String" array="True"/>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <assign variable="buddy[i]" expression="&quot;&quot;"/>
+            </for>
+        </body>
+    </function>
+    <function name="input" type="None" variable="">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+            <parameter name="buddy" type="String" array="True"/>
+        </parameters>
+        <body>
+            <while expression="i &lt; 4">
+                <input variable="buddy[i]"/>
+                <if expression="buddy[i] != &quot;---&quot;">
+                    <then>
+                        <assign variable="i" expression="i + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="i" expression="4"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="roombuddies" type="None" variable="">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+            <parameter name="buddy" type="String" array="True"/>
+        </parameters>
+        <body>
+            <while expression="i &lt; 4">
+                <if expression="buddy[i] != &quot;---&quot;">
+                    <then>
+                        <output expression="buddy[i]" newline="True"/>
+                        <assign variable="i" expression="i + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="i" expression="4"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

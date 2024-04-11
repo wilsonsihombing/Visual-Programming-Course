@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MSI GF63"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-30 11:14:35 AM"/>
+        <attribute name="created" value="TVNJIEdGNjM7TVNJOzIwMjItMDktMjI7MDI6MDU6MTcgUE07MjAyMg=="/>
+        <attribute name="edited" value="TVNJIEdGNjM7TVNJOzIwMjItMDktMzA7MTE6MTQ6MzUgQU07ODsyMTIx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ISBN" type="String" array="False" size=""/>
+            <declare name="Judul" type="String" array="False" size=""/>
+            <declare name="Penulis" type="String" array="False" size=""/>
+            <declare name="Tahunterbit" type="String" array="False" size=""/>
+            <declare name="Penerbit" type="String" array="False" size=""/>
+            <declare name="Formatbuku" type="String" array="False" size=""/>
+            <declare name="Hargapembelian" type="Real" array="False" size=""/>
+            <declare name="Minimummargin" type="Real" array="False" size=""/>
+            <declare name="Stok" type="Integer" array="False" size=""/>
+            <declare name="Rating" type="Real" array="False" size=""/>
+            <declare name="kategoribuku" type="String" array="False" size=""/>
+            <input variable="ISBN"/>
+            <input variable="Judul"/>
+            <input variable="Penulis"/>
+            <input variable="Tahunterbit"/>
+            <input variable="Penerbit"/>
+            <input variable="Formatbuku"/>
+            <input variable="Hargapembelian"/>
+            <input variable="Minimummargin"/>
+            <input variable="Stok"/>
+            <input variable="Rating"/>
+            <if expression="Rating&gt;=4.7">
+                <then>
+                    <assign variable="kategoribuku" expression="Bestpick"/>
+                </then>
+                <else>
+                    <if expression="Rating&gt;=4.0">
+                        <then>
+                            <assign variable="Kategoribuku" expression="kelas"/>
+                        </then>
+                        <else>
+                            <if expression="Rating&lt;= 3.2">
+                                <then>
+                                    <assign variable="Kategoribuku" expression="biasaaja"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="ISBN&amp;&amp;&quot;|&quot;&amp;&amp;Judul&amp;&amp;&quot;|&quot;&amp;&amp;Penulis&amp;&amp;&quot;|&quot;&amp;&amp;Tahunterbit&amp;&amp;&quot;|&quot;&amp;&amp;Penerbit&amp;&amp;&quot;|&quot;&amp;&amp;Formatbuku&amp;&amp;&quot;|&quot;&amp;&amp;Hargapembelian&amp;&amp;&quot;|&quot;&amp;&amp;Minimummargin&amp;&amp;&quot;|&quot;&amp;&amp;Stok&amp;&amp;&quot;|&quot;&amp;&amp;Rating&amp;&amp;&quot;|&quot;&amp;&amp;Kategoribuku" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

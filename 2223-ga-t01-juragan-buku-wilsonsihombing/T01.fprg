@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MSI GF63"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-06 04:09:48 PM"/>
+        <attribute name="created" value="TVNJIEdGNjM7TVNJOzIwMjItMDktMjI7MDI6MDU6MTcgUE07MjAyMg=="/>
+        <attribute name="edited" value="TVNJIEdGNjM7TVNJOzIwMjMtMDktMDY7MDQ6MDk6NDggUE07NjsyMTQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ISBN" type="String" array="False" size=""/>
+            <declare name="Judul" type="String" array="False" size=""/>
+            <declare name="Penulis" type="String" array="False" size=""/>
+            <declare name="Tahunterbit" type="String" array="False" size=""/>
+            <declare name="Penerbit" type="String" array="False" size=""/>
+            <declare name="Formatbuku" type="String" array="False" size=""/>
+            <declare name="Hargapembelian" type="Real" array="False" size=""/>
+            <declare name="Minimummargin" type="Real" array="False" size=""/>
+            <declare name="Stok" type="Integer" array="False" size=""/>
+            <declare name="Rating" type="Real" array="False" size=""/>
+            <input variable="ISBN"/>
+            <input variable="Judul"/>
+            <input variable="Penulis"/>
+            <input variable="Tahunterbit"/>
+            <input variable="Penerbit"/>
+            <input variable="Formatbuku"/>
+            <input variable="Hargapembelian"/>
+            <input variable="Minimummargin"/>
+            <input variable="Stok"/>
+            <input variable="Rating"/>
+            <output expression="ISBN&amp;&quot;|&quot;&amp;Judul&amp;&quot;|&quot;&amp;Penulis&amp;&quot;|&quot;&amp;Tahunterbit&amp;&quot;|&quot;&amp;Penerbit&amp;&quot;|&quot;&amp;Formatbuku&amp;&quot;|&quot;&amp;Hargapembelian&amp;&quot;|&quot;&amp;Minimummargin&amp;&quot;|&quot;&amp;Stok&amp;&quot;|&quot;&amp;Rating" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
